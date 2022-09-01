@@ -1,5 +1,5 @@
 <?php
-$fullName = "Teddy Amare";
+$full_name = "Teddy Amare";
 $title = "ASE 230 - class of Fall 2022";
 $header = "This is ASE 230 - class of Fall 2022";
 ?>
@@ -68,7 +68,7 @@ $header = "This is ASE 230 - class of Fall 2022";
 					<div class="single_advisor_details_info">
 						<h6>
 							<?php
-							echo $fullName;
+							echo $full_name;
 							?>
 						</h6>
 						<p class="designation">Founder &amp; CEO</p>

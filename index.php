@@ -1,5 +1,7 @@
 <?php
-$fullName = "Teddy Amare";
+$full_name = "Teddy Amare";
+$title = "ASE 230 - class of Fall 2022";
+$header = "This is ASE 230 - class of Fall 2022";
 ?>
 
 
@@ -13,12 +15,20 @@ $fullName = "Teddy Amare";
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 	<link rel="stylesheet" href="assets/css/index.css" />
-	<title>ASE 230 - class of Spring/Fall/Summer 20XX</title>
+	<title>
+		<?php
+		echo $title;
+		?>
+	</title>
 </head>
 
 <body>
 	<div class="container text-center">
-		<h1>This is ASE 230 - class of Spring/Fall/Summer 20XX</h1>
+		<h1>
+			<?php
+			echo $header;
+			?>
+		</h1>
 	</div>
 	<div class="container">
 		<div class="row justify-content-center">
@@ -58,7 +68,7 @@ $fullName = "Teddy Amare";
 					<div class="single_advisor_details_info">
 						<h6>
 							<?php
-							echo $fullName;
+							echo $full_name;
 							?>
 						</h6>
 						<p class="designation">Founder &amp; CEO</p>

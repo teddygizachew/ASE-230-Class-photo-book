@@ -5,7 +5,7 @@ $dream_company = "Mercedes-Benz";
 $email = "amaret1@nku.edu";
 $quote = "“None but ourselves can free our minds.” ― Bob Marley";
 $about_me = "Hey there :) <br><br> My name is Tewodros Amare but you can me Teddy. I'm a 
-Computer Science major with a minor in Data Science. I enjoy spending my free time capturing 
+Computer Science major with a minor in Data Science. I'm originally from Ethiopia and I enjoy spending my free time capturing 
 moments, kayaking and traveling. I currently work as a Resident Assistant on campus. ";
 $mobile_development = "Mobile Development";
 $mobile_dev_percent = "90%";

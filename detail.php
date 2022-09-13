@@ -34,7 +34,7 @@ $advisors = array(
 		'ux_des_perecent' => "68%",
 		'volleyball' => 'Soccer',
 		'voll_percent' => '90%',
-		'fun_fact' => 'Sed nec diam arcu. Proin lobortis venenatis lorem, a auctor arcu.'
+		'fun_fact' => 'Sed nec diam arcu. Proin lobortis venenatis jkds lorem, a auctor arcu.'
 	],
 	[
 		'name' => 'Abebe Kebede',

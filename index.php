@@ -4,10 +4,10 @@ $title = "ASE 230 - class of Fall 2022";
 $header = "This is ASE 230 - class of Fall 2022";
 
 $advisors = array(
-  ['name' => 'Teddy Amare', 'job' => 'Founder &amp; CEO', 'image' => 'assets/header.jpg', 'year' => 'assets/one.png'],
-  ['name' => 'Nazrul Islam', 'job' => 'UI Designer', 'image' => 'https://bootdey.com/img/Content/avatar/avatar7.png', 'year' => 'assets/two.png'],
-  ['name' => 'Riyadh Khan', 'job' => 'Developer', 'image' => 'https://bootdey.com/img/Content/avatar/avatar6.png', 'year' => 'assets/three.png'],
-  ['name' => 'Niloy Islam', 'job' => 'Marketing Manager', 'image' => 'https://bootdey.com/img/Content/avatar/avatar2.png', 'year' => 'assets/four.png']
+  ['name' => 'Teddy Amare', 'job' => 'Founder &amp; CEO', 'image' => 'assets/header.jpg', 'year' => 'senior'],
+  ['name' => 'Jacobs Fathu', 'job' => 'UI Designer', 'image' => 'https://bootdey.com/img/Content/avatar/avatar7.png', 'year' => 'sophomore'],
+  ['name' => 'Abebe Kebede ', 'job' => 'Developer', 'image' => 'https://bootdey.com/img/Content/avatar/avatar6.png', 'year' => 'junior'],
+  ['name' => 'Leroy Washer III', 'job' => 'Marketing Manager', 'image' => 'https://bootdey.com/img/Content/avatar/avatar2.png', 'year' => 'freshman']
 );
 ?>
 
@@ -74,17 +74,42 @@ $advisors = array(
 						<a href="detail.php?id=' . $i . '"><img src="' . $advisor['image'] . '" alt="" /></a>
 						<!-- Social Info-->
 						<div class="social-info">
-							<a href="detail.php"><i class="fa fa-facebook"></i></a><a href="detail.php"><i class="fa fa-twitter"></i></a><a href="detail.php"><i class="fa fa-linkedin"></i></a>
+							<a href="detail.php?id=' . $i . '"><i class="fa fa-facebook"></i></a><a href="detail.php?id=' . $i . '"><i class="fa fa-twitter"></i></a><a href="detail.php?id=' . $i . '"><i class="fa fa-linkedin"></i></a>
 						</div>
 					</div>
           
 					<!-- Team Details-->
-					<div class="single_advisor_details_info">
-            <div class="single_advisor_details_info_year">
-              <a href="detail.php"><img src="' . $advisor['year'] . '" alt="" /></a>
-            </div>
-						<h6>' . $advisor['name'] . ' </h6>
-						<p class="designation">' . $advisor['job'] . '</p>
+					<div class="single_advisor_details_info">';
+        if ($advisor['year'] == 'freshman') {
+          echo '
+              <div class="single_advisor_details_info_year">
+                <a href="detail.php?id=' . $i . '"><img class="single_advisor_details_info_year_img" src="assets/star.png" alt="" /></a>
+              </div>';
+        } elseif ($advisor['year'] == 'sophomore') {
+          echo '
+              <div class="single_advisor_details_info_year">
+                <a href="detail.php?id=' . $i . '"><img class="single_advisor_details_info_year_img"  src="assets/star.png" alt="" /></a>
+                <a href="detail.php?id=' . $i . '"><img class="single_advisor_details_info_year_img"  src="assets/star.png" alt="" /></a>
+              </div>';
+        } elseif ($advisor['year'] == 'junior') {
+          echo '
+              <div class="single_advisor_details_info_year">
+                <a href="detail.php?id=' . $i . '"><img class="single_advisor_details_info_year_img"  src="assets/star.png" alt="" /></a>
+                <a href="detail.php?id=' . $i . '"><img class="single_advisor_details_info_year_img"  src="assets/star.png" alt="" /></a>
+                <a href="detail.php?id=' . $i . '"><img class="single_advisor_details_info_year_img"  src="assets/star.png" alt="" /></a>
+              </div>';
+        } else {
+          echo '
+              <div class="single_advisor_details_info_year">
+                <a href="detail.php?id=' . $i . '"><img class="single_advisor_details_info_year_img"  src="assets/star.png" alt="" /></a>
+                <a href="detail.php?id=' . $i . '"><img class="single_advisor_details_info_year_img"  src="assets/star.png" alt="" /></a>
+                <a href="detail.php?id=' . $i . '"><img class="single_advisor_details_info_year_img"  src="assets/star.png" alt="" /></a>
+                <a href="detail.php?id=' . $i . '"><img class="single_advisor_details_info_year_img"  src="assets/star.png" alt="" /></a>
+              </div>';
+        }
+        echo '
+					  <h6>' . $advisor['name'] . ' </h6>
+					  <p class="designation">' . $advisor['job'] . '</p>
 					  </div>
 				  </div>
 			  </div>';

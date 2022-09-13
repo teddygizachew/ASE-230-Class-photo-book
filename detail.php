@@ -1,19 +1,96 @@
 <?php
-$header = "This is ASE 230 - Teddy Amare";
-$dream_profession = "Engineering Manager";
-$dream_company = "Mercedes-Benz";
-$email = "amaret1@nku.edu";
-$quote = "“None but ourselves can free our minds.” ― Bob Marley";
-$about_me = "Hey there :) <br><br> My name is Tewodros Amare but you can me Teddy. I'm a 
-Computer Science major with a minor in Data Science. I'm originally from Ethiopia and I enjoy spending my free time capturing 
-moments, kayaking and traveling. I currently work as a Resident Assistant on campus. ";
-$mobile_development = "Mobile Development";
-$mobile_dev_percent = "90%";
-$ux_design = "UX Design";
-$ux_des_perecent = "85%";
-$volleyball = "Volleyball";
-$voll_percent = "99%";
-$fun_fact = "I visited the NYSE Stock Exchange summer 22 and got to see the openning bell!";
+$advisors = array(
+	[
+		'name' => 'Teddy Amare',
+		'job' => 'Founder &amp; CEO',
+		'image' => 'assets/header.jpg',
+		'year' => 'assets/one.png',
+		'dream_profession' => 'Engineering Manager',
+		'dream_company' => 'Mercedes-Benz',
+		'email' => 'amaret1@nku.edu',
+		'quote' => '“None but ourselves can free our minds.” ― Bob Marley',
+		'about_me' => "Hey there :) <br><br> My name is Tewodros Amare but you can me Teddy. I'm a 
+		Computer Science major with a minor in Data Science. I'm originally from Ethiopia and I enjoy spending my free time capturing 
+		moments, kayaking and traveling. I currently work as a Resident Assistant on campus. ",
+		'mobile_development' => 'Mobile Development',
+		'mobile_dev_percent' => '90%',
+		'ux_design' => "UX Design",
+		'ux_des_perecent' => "85%",
+		'volleyball' => 'Volleyball',
+		'voll_percent' => '99%',
+		'fun_fact' => 'I visited the NYSE Stock Exchange in the summer of 2022 and got to see the openning bell!'
+	],
+	[
+		'name' => 'Nazrul Islam',
+		'job' => 'UI Designer',
+		'image' => 'https://bootdey.com/img/Content/avatar/avatar7.png',
+		'year' => 'assets/two.png',
+		'dream_profession' => 'Engineering Manager',
+		'dream_company' => 'Mercedes-Benz',
+		'email' => 'amaret1@nku.edu',
+		'quote' => '“None but ourselves can free our minds.” ― Bob Marley',
+		'about_me' => "Hey there :) <br><br> My name is Tewodros Amare.",
+		'mobile_development' => 'Mobile Development',
+		'mobile_dev_percent' => '90%',
+		'ux_design' => "UX Design",
+		'ux_des_perecent' => "85%",
+		'volleyball' => 'Volleyball',
+		'voll_percent' => '99%',
+		'fun_fact' => 'I visited the NYSE Stock Exchange in the summer of 2022 and got to see the openning bell!'
+	],
+	[
+		'name' => 'Riyadh Khan',
+		'job' => 'Developer',
+		'image' => 'https://bootdey.com/img/Content/avatar/avatar6.png',
+		'year' => 'assets/three.png',
+		'dream_profession' => 'Engineering Manager',
+		'dream_company' => 'Mercedes-Benz',
+		'email' => 'amaret1@nku.edu',
+		'quote' => '“None but ourselves can free our minds.” ― Bob Marley',
+		'about_me' => "Hey there :) <br><br> My name ... ",
+		'mobile_development' => 'Mobile Development',
+		'mobile_dev_percent' => '90%',
+		'ux_design' => "UX Design",
+		'ux_des_perecent' => "85%",
+		'volleyball' => 'Volleyball',
+		'voll_percent' => '99%',
+		'fun_fact' => 'I visited the NYSE Stock Exchange in the summer of 2022 and got to see the openning bell!'
+	],
+	[
+		'name' => 'Niloy Islam',
+		'job' => 'Marketing Manager',
+		'image' => 'https://bootdey.com/img/Content/avatar/avatar2.png',
+		'year' => 'assets/four.png',
+		'dream_profession' => 'Engineering Manager',
+		'dream_company' => 'Mercedes-Benz',
+		'email' => 'amaret1@nku.edu',
+		'quote' => '“None but ourselves can free our minds.” ― Bob Marley',
+		'about_me' => "Hey there :)",
+		'mobile_development' => 'Mobile Development',
+		'mobile_dev_percent' => '90%',
+		'ux_design' => "UX Design",
+		'ux_des_perecent' => "85%",
+		'volleyball' => 'Volleyball',
+		'voll_percent' => '99%',
+		'fun_fact' => 'I visited the NYSE Stock Exchange in the summer of 2022 and got to see the openning bell!'
+	]
+);
+
+$name = $advisors[$_GET['id']]['name'];
+$header = "This is ASE 230 - $name";
+$dream_profession = $advisors[$_GET['id']]['dream_profession'];
+$dream_company = $advisors[$_GET['id']]['dream_company'];
+$email = $advisors[$_GET['id']]['email'];
+
+$quote = $advisors[$_GET['id']]['quote'];
+$about_me = $advisors[$_GET['id']]['about_me'];
+$mobile_development = $advisors[$_GET['id']]['mobile_development'];
+$mobile_dev_percent = $advisors[$_GET['id']]['mobile_dev_percent'];
+$ux_design = $advisors[$_GET['id']]['ux_design'];
+$ux_des_perecent = $advisors[$_GET['id']]['ux_des_perecent'];
+$volleyball = $advisors[$_GET['id']]['volleyball'];
+$voll_percent = $advisors[$_GET['id']]['voll_percent'];
+$fun_fact = $advisors[$_GET['id']]['fun_fact'];
 ?>
 
 <html lang="en">
@@ -25,7 +102,9 @@ $fun_fact = "I visited the NYSE Stock Exchange summer 22 and got to see the open
 
 <body>
 	<link rel="stylesheet" href="assets/css/detail.css" />
-	<title>ASE 230 - Teddy Amare</title>
+	<?php
+	echo "<title>ASE 230 - $name</title>";
+	?>
 
 	<div class="roww">
 		<div>

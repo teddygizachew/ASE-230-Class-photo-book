@@ -17,7 +17,7 @@ $advisors = array(
 		'ux_des_perecent' => "85%",
 		'volleyball' => 'Volleyball',
 		'voll_percent' => '99%',
-		'fun_fact' => 'I visited the NYSE Stock Exchange in the summer of 2022 and got to see the openning bell!'
+		'fun_fact' => 'I visited the NYSE Stock Exchange in the summer of 2022 and got to see the openning bell!!'
 	],
 	[
 		'name' => 'Jacobs Fathu',

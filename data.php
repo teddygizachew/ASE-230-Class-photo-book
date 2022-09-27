@@ -1,5 +1,6 @@
 <?php
-
+// an array containing information about author ad three other colleagues
+// adds a new attribute of 'dob' => 'maps to date of birth'
 $advisors = array(
 	[
 		'name' => 'Teddy Amare',

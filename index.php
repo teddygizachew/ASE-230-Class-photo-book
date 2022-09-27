@@ -7,6 +7,7 @@ $full_name = "Teddy Amare";
 $title = "ASE 230 - class of Fall 2022";
 $header = "This is ASE 230 - class of Fall 2022";
 
+// Function to display individual cards of advisors
 function display_card($advisors) {
   $i = 0;
   foreach ($advisors as $advisor) {
@@ -64,7 +65,6 @@ function display_card($advisors) {
     </div>';
     $i++;
   }
-      
 }
 
 ?>
@@ -114,11 +114,7 @@ function display_card($advisors) {
       </div>
     </div>
     <div class="row">
-
-      <!-- Class Year -->
-
       <!-- Single Advisor-->
-
       <?php
       display_card($advisors);
       ?>

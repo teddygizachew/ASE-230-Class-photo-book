@@ -1,9 +1,10 @@
 <?php
+
 $advisors = array(
 	[
 		'name' => 'Teddy Amare',
 		'job' => 'Founder &amp; CEO',
-    'dob' => '07/18/2001',
+    'dob' => '18-7-2001',
 		'image' => 'assets/header.jpg',
 		'dream_profession' => 'Engineering Manager',
 		'dream_company' => 'Mercedes-Benz',
@@ -23,7 +24,7 @@ $advisors = array(
 	[
 		'name' => 'Jacobs Fathu',
 		'job' => 'UI Designer',
-    'dob' => '05/05/1992',
+    'dob' => '05-05-1992',
 		'image' => 'https://bootdey.com/img/Content/avatar/avatar7.png',
 		'dream_profession' => 'Senior UX Researcher',
 		'dream_company' => 'Figma',
@@ -41,7 +42,7 @@ $advisors = array(
 	[
 		'name' => 'Abebe Kebede',
 		'job' => 'Developer',
-    'dob' => '01/29/1997',
+    'dob' => '29-01-1997',
 		'image' => 'https://bootdey.com/img/Content/avatar/avatar6.png',
 		'dream_profession' => 'CTO',
 		'dream_company' => 'Banana',
@@ -59,7 +60,7 @@ $advisors = array(
 	[
 		'name' => 'Leroy Washer III',
 		'job' => 'Marketing Manager',
-    'dob' => '09/26/1978',
+    'dob' => '26-09-1978',
 		'image' => 'https://bootdey.com/img/Content/avatar/avatar2.png',
 		'dream_profession' => 'Speaker',
 		'dream_company' => 'Mailchimp',

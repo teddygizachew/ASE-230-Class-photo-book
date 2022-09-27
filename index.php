@@ -7,20 +7,64 @@ $full_name = "Teddy Amare";
 $title = "ASE 230 - class of Fall 2022";
 $header = "This is ASE 230 - class of Fall 2022";
 
-$advisors = array(
-  ['name' => 'Teddy Amare', 'job' => 'Founder &amp; CEO', 'image' => 'assets/header.jpg', 'year' => 'senior'],
-  ['name' => 'Jacobs Fathu', 'job' => 'UI Designer', 'image' => 'https://bootdey.com/img/Content/avatar/avatar7.png', 'year' => 'sophomore'],
-  ['name' => 'Abebe Kebede ', 'job' => 'Developer', 'image' => 'https://bootdey.com/img/Content/avatar/avatar6.png', 'year' => 'junior'],
-  ['name' => 'Leroy Washer III', 'job' => 'Marketing Manager', 'image' => 'https://bootdey.com/img/Content/avatar/avatar2.png', 'year' => 'freshman']
-);
-
-/*
-Create a function for displaying a single card, with all the necessary parameters 
-and code for rendering the information, including the age and how long ago the 
-person was born
-*/
-function display_card() {
-
+function display_card($advisors) {
+  $i = 0;
+  foreach ($advisors as $advisor) {
+    echo '<div class="col-12 col-sm-6 col-lg-3">
+    <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.2s" style="
+          visibility: visible;
+          animation-delay: 0.2s;
+          animation-name: fadeInUp;
+        ">
+      <!-- Team Thumb-->
+      <div class="advisor_thumb">
+        <a href="detail.php?id=' . $i . '"><img src="' . $advisor['image'] . '" alt="" /></a>
+        <!-- Social Info-->
+        <div class="social-info">
+          <a href="detail.php?id=' . $i . '"><i class="fa fa-facebook"></i></a><a href="detail.php?id=' . $i . '"><i class="fa fa-twitter"></i></a><a href="detail.php?id=' . $i . '"><i class="fa fa-linkedin"></i></a>
+        </div>
+      </div>
+      
+      <!-- Team Details-->
+      <div class="single_advisor_details_info">';
+    if ($advisor['year'] == 'freshman') {
+      echo '
+          <div class="single_advisor_details_info_year">
+            <a href="detail.php?id=' . $i . '"><img class="single_advisor_details_info_year_img" src="assets/star.png" alt="" /></a>
+          </div>';
+    } elseif ($advisor['year'] == 'sophomore') {
+      echo '
+          <div class="single_advisor_details_info_year">
+            <a href="detail.php?id=' . $i . '"><img class="single_advisor_details_info_year_img"  src="assets/star.png" alt="" /></a>
+            <a href="detail.php?id=' . $i . '"><img class="single_advisor_details_info_year_img"  src="assets/star.png" alt="" /></a>
+          </div>';
+    } elseif ($advisor['year'] == 'junior') {
+      echo '
+          <div class="single_advisor_details_info_year">
+            <a href="detail.php?id=' . $i . '"><img class="single_advisor_details_info_year_img"  src="assets/star.png" alt="" /></a>
+            <a href="detail.php?id=' . $i . '"><img class="single_advisor_details_info_year_img"  src="assets/star.png" alt="" /></a>
+            <a href="detail.php?id=' . $i . '"><img class="single_advisor_details_info_year_img"  src="assets/star.png" alt="" /></a>
+          </div>';
+    } else {
+      echo '
+          <div class="single_advisor_details_info_year">
+            <a href="detail.php?id=' . $i . '"><img class="single_advisor_details_info_year_img"  src="assets/star.png" alt="" /></a>
+            <a href="detail.php?id=' . $i . '"><img class="single_advisor_details_info_year_img"  src="assets/star.png" alt="" /></a>
+            <a href="detail.php?id=' . $i . '"><img class="single_advisor_details_info_year_img"  src="assets/star.png" alt="" /></a>
+            <a href="detail.php?id=' . $i . '"><img class="single_advisor_details_info_year_img"  src="assets/star.png" alt="" /></a>
+          </div>';
+    }
+    echo '
+        <h6>' . $advisor['name'] . ' </h6>
+        <p class="designation">' . $advisor['job'] . '</p>
+        <p class="designation">' . calculate_age($advisor['dob']) . '</p>
+        <p class="designation">' . calculate_time_alive($advisor['dob']) . '</p>
+        </div>
+      </div>
+    </div>';
+    $i++;
+  }
+      
 }
 
 ?>
@@ -74,61 +118,9 @@ function display_card() {
       <!-- Class Year -->
 
       <!-- Single Advisor-->
+
       <?php
-      $i = 0;
-      foreach ($advisors as $advisor) {
-        echo '<div class="col-12 col-sm-6 col-lg-3">
-				<div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.2s" style="
-							visibility: visible;
-							animation-delay: 0.2s;
-							animation-name: fadeInUp;
-						">
-					<!-- Team Thumb-->
-					<div class="advisor_thumb">
-						<a href="detail.php?id=' . $i . '"><img src="' . $advisor['image'] . '" alt="" /></a>
-						<!-- Social Info-->
-						<div class="social-info">
-							<a href="detail.php?id=' . $i . '"><i class="fa fa-facebook"></i></a><a href="detail.php?id=' . $i . '"><i class="fa fa-twitter"></i></a><a href="detail.php?id=' . $i . '"><i class="fa fa-linkedin"></i></a>
-						</div>
-					</div>
-          
-					<!-- Team Details-->
-					<div class="single_advisor_details_info">';
-        if ($advisor['year'] == 'freshman') {
-          echo '
-              <div class="single_advisor_details_info_year">
-                <a href="detail.php?id=' . $i . '"><img class="single_advisor_details_info_year_img" src="assets/star.png" alt="" /></a>
-              </div>';
-        } elseif ($advisor['year'] == 'sophomore') {
-          echo '
-              <div class="single_advisor_details_info_year">
-                <a href="detail.php?id=' . $i . '"><img class="single_advisor_details_info_year_img"  src="assets/star.png" alt="" /></a>
-                <a href="detail.php?id=' . $i . '"><img class="single_advisor_details_info_year_img"  src="assets/star.png" alt="" /></a>
-              </div>';
-        } elseif ($advisor['year'] == 'junior') {
-          echo '
-              <div class="single_advisor_details_info_year">
-                <a href="detail.php?id=' . $i . '"><img class="single_advisor_details_info_year_img"  src="assets/star.png" alt="" /></a>
-                <a href="detail.php?id=' . $i . '"><img class="single_advisor_details_info_year_img"  src="assets/star.png" alt="" /></a>
-                <a href="detail.php?id=' . $i . '"><img class="single_advisor_details_info_year_img"  src="assets/star.png" alt="" /></a>
-              </div>';
-        } else {
-          echo '
-              <div class="single_advisor_details_info_year">
-                <a href="detail.php?id=' . $i . '"><img class="single_advisor_details_info_year_img"  src="assets/star.png" alt="" /></a>
-                <a href="detail.php?id=' . $i . '"><img class="single_advisor_details_info_year_img"  src="assets/star.png" alt="" /></a>
-                <a href="detail.php?id=' . $i . '"><img class="single_advisor_details_info_year_img"  src="assets/star.png" alt="" /></a>
-                <a href="detail.php?id=' . $i . '"><img class="single_advisor_details_info_year_img"  src="assets/star.png" alt="" /></a>
-              </div>';
-        }
-        echo '
-					  <h6>' . $advisor['name'] . ' </h6>
-					  <p class="designation">' . $advisor['job'] . '</p>
-					  </div>
-				  </div>
-			  </div>';
-        $i++;
-      }
+      display_card($advisors);
       ?>
 
     </div>

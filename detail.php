@@ -1,4 +1,8 @@
 <?php
+
+include 'data.php';
+include 'functions.php';
+
 $advisors = array(
 	[
 		'name' => 'Teddy Amare',
@@ -251,6 +255,10 @@ $fun_fact = $advisors[$_GET['id']]['fun_fact'];
 					echo $fun_fact;
 					?>
 				</p>
+				<?php
+				echo "$age"."<br/>";
+				echo "$time_alive";
+				?>
 			</div>
 		</div>
 	</div>

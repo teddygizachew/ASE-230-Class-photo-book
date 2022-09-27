@@ -1,4 +1,8 @@
 <?php
+
+include 'data.php';
+include 'functions.php';
+
 $full_name = "Teddy Amare";
 $title = "ASE 230 - class of Fall 2022";
 $header = "This is ASE 230 - class of Fall 2022";
@@ -9,6 +13,16 @@ $advisors = array(
   ['name' => 'Abebe Kebede ', 'job' => 'Developer', 'image' => 'https://bootdey.com/img/Content/avatar/avatar6.png', 'year' => 'junior'],
   ['name' => 'Leroy Washer III', 'job' => 'Marketing Manager', 'image' => 'https://bootdey.com/img/Content/avatar/avatar2.png', 'year' => 'freshman']
 );
+
+/*
+Create a function for displaying a single card, with all the necessary parameters 
+and code for rendering the information, including the age and how long ago the 
+person was born
+*/
+function display_card() {
+
+}
+
 ?>
 
 

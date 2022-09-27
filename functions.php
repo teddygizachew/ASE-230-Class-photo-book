@@ -14,9 +14,4 @@ function calculate_time_alive($dob) {
   return $interval->format('You\'ve been alive: %y years, %m months, %d days old.');
 }
 
-$time_alive = calculate_time_alive('18-7-2001');
-// echo $result.'<br/>';
-
-$age = calculate_age('18-7-2001');
-// echo $result;
 ?>
